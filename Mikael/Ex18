@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<locale.h>
+#include<math.h>
+#include<string.h>
+
+main(){
+	setlocale(LC_ALL,"portuguese");
+	int cont, cont28;
+	cont28 = 0;
+	int T[31] = {-22};
+	
+	for(cont=0; cont<31; cont++) 
+	{
+		printf("Digite um valor para T[%d]:", cont+1);
+		scanf("%d", &T[cont]); 
+		
+		while (T[cont]< -15 || T[cont]>45) {
+		
+		printf("Digite um valor para T[%d]:", cont+1);
+		scanf("%d", &T[cont]); 
+		}	
+	}
+	for(cont=0; cont<31; cont++) {	
+	printf("vetorT[%d] é: %d\n",cont+1,T[cont]);
+	if (T[cont]>28) {
+	cont28++;
+	printf("a posicao de T[%d] é maior que 28\n", cont+1);	
+	}
+	
+	}
+	printf("a quantidade de vezes que a temperatura for maior que 28 é de: %d \n",cont28);
+	
+}
