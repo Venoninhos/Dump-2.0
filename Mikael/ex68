@@ -1,0 +1,64 @@
+//biblioteca padrao de Input/output
+#include <stdio.h>
+//biblioteca padra de console
+#include <conio.h>
+//biblioteca padrao
+#include <stdlib.h>
+//biblioteca de localizacao
+#include <locale.h>
+#include <string.h>
+
+main() {
+	//faz aceitar acentos
+    setlocale(LC_ALL, "portuguese");
+    char nome[10][31];
+    int nota[10][4] = {-1};
+    int cont, l, c;
+    int soma[10] = {0};
+    int media[10] = {0};
+    for (cont = 0;cont<10;cont++) {
+    	printf("Digite o nome do aluno: %d\n",cont+1);
+    	gets(nome[cont]);
+	}
+	for(l=0;l<10;l++){
+		for(c=0;c<4;c++){
+		printf("Digite a nota %d do %s\n",c+1, nome[l] );
+		scanf("%d", &nota[l][c]);
+		while (nota[l][c]<0 || nota[l][c]>10) {
+		printf("Digite a nota %d do %s\n",c+1, nome[l] );
+		scanf("%d", &nota[l][c]);	
+		}
+		soma[l]=soma[l]+nota[l][c];
+	}
+
+
+}
+		for(l=0;l<10;l++){
+		media[l]=soma[l]/4;
+		printf("NOME: %s MÉDIA: %d \n",nome[l],media[l]);
+				}
+		char rec[10][31];
+		for(l=0;l<10;l++){
+		if (media[l]<6) {
+			
+		strcpy(rec[l],nome[l]);	
+			
+		}
+	}
+	for(l=0;l<=strlen(rec);l++){
+	printf("Alunos de REC: %s \n",rec[l]);	
+}
+				
+	}
+	
+	
+	
+
+
+
+
+
+
+
+
+
