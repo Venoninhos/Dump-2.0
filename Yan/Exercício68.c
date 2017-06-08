@@ -9,7 +9,7 @@ int main (){
 	for (count = 0; count < 10; count++){
 		printf("Insira o %iº aluno: ",count+1);
 		fflush(stdin);
-		scanf("%s",nome[count]);
+		scanf("%[^\n]%*c",nome[count]);
 		for (count2 = 0; count2 < 4; count2++){
 			printf("Insira a %iª nota: ",count2+1);
 			fflush(stdin);
